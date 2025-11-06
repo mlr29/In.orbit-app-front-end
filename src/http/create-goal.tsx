@@ -1,3 +1,5 @@
+import { API_BASE_URL } from '../lib/api'
+
 interface CreateGoal {
   title: string
   desiredWeeklyFrequency: number
@@ -7,7 +9,7 @@ export async function createGoal({
   title,
   desiredWeeklyFrequency,
 }: CreateGoal) {
-  await fetch('http://localhost:3333/goals', {
+  await fetch(`${API_BASE_URL}/goals`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

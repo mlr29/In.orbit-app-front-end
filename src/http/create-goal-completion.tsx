@@ -1,5 +1,7 @@
+import { API_BASE_URL } from "../lib/api";
+
 export async function createGoalCompletion(goalId: string) {
-  await fetch('http://localhost:3333/completions', {
+  await fetch(`${API_BASE_URL}/completions`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
